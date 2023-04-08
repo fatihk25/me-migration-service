@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('sensor_rules', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->string('phone_number');
-            $table->string('photo')->nullable();
+            $table->string('file')->nullable();
+            $table->string('status')->nullable();
+            $table->uuid('sensor_uuid')->nullable();
+            $table->foreign('sensor_uuid')->references('uuid')->on('sensors') ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('sensor_rules');
     }
 };

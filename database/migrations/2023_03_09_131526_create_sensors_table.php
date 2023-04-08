@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('organization_id');
-            $table->uuid('uuid');
+            $table->uuid('uuid')->unique();
             $table->string('mqtt_topic');
             $table->string('mqtt_ip');
             $table->string('mqtt_port');
