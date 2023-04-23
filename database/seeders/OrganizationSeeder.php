@@ -18,8 +18,8 @@ class OrganizationSeeder extends Seeder
     {
         //
         DB::table('organizations')->insert([
-            'name' => 'Mata Elang RG',
-            'email' => 'merg@mail.com',
+            'name' => 'Base Organization',
+            'email' => 'your@organization.com',
             'address' => fake()->address(),
             'province' => fake()->state(),
             'city' => fake()->city(),
