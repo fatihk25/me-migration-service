@@ -20,7 +20,8 @@ class RoleSeeder extends Seeder
         DB::table('roles')->insert([
             'name' => 'admin',
             'organization_id' => 1,
-            'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]);
     }
 }

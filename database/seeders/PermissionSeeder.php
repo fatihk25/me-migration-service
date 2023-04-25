@@ -20,75 +20,108 @@ class PermissionSeeder extends Seeder
         $data = [
             [
                 'name' => 'Create User',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'create-user',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Edit User',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'edit-user',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Delete User',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'delete-user',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name'=> 'Read User',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'read-user',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Create Sensor',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'create-sensor',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Update Sensor',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'update-sensor',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Delete Sensor',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'delete-sensor',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Read Sensor',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'read-sensor',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Create Organization',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'create-organization',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Edit Organization',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'edit-organization',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Delete Organization',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'delete-organization',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Read Organization',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'read-organization',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Create Asset',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'create-asset',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Edit Asset',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'edit-asset',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Delete Asset',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'delete-asset',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'name' => 'Read Asset',
-                'timestamps' => Carbon::now()->format('Y-m-d H:i:s'),
+                'slug' => 'read-asset',
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]
         ];
 
         foreach($data as $key => $value) {
             DB::table('permissions')->insert([
                 'name' => $value["name"],
-                'created_at' => $value["timestamps"],
-                'updated_at' => $value["timestamps"],
+                'slug' => $value["slug"],   
+                'created_at' => $value["created_at"],
+                'updated_at' => $value["updated_at"],
             ]);
         }
     }

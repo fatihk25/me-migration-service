@@ -7,7 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class RolePermissionSeeder extends Seeder
+class PermissionRoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,10 +16,10 @@ class RolePermissionSeeder extends Seeder
      */
     public function run()
     {
-        //r
+        //
         $permissions = DB::table('permissions')->select('id')->get();
         foreach($permissions as $permission){
-            DB::table('role_permissions')->insert([
+            DB::table('permission_role')->insert([
                 'role_id' => 1,
                 'permission_id' => $permission->id,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),

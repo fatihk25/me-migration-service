@@ -18,9 +18,10 @@ class DatabaseSeeder extends Seeder
             OrganizationSeeder::class,
             RoleSeeder::class,
             UserSeeder::class,
-            OrganizationMemberSeeder::class,
             SensorSeeder::class,
             PermissionSeeder::class,
+            OrganizationUserSeeder::class,
+            PermissionRoleSeeder::class,
         ]);
     }
 }
