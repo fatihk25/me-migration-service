@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('network_interface');
             $table->string('protected_subnet');
             $table->string('external_subnet');
+            $table->string('update_status');
             $table->foreign('organization_id')->references('id')->on('organizations') ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
