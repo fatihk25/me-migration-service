@@ -24,7 +24,7 @@ class OrganizationSeeder extends Seeder
             'province' => fake()->state(),
             'city' => fake()->city(),
             'phone_number' => fake()->phoneNumber(),
-            'oinkcode' => Str::random(10),
+            'oinkcode' => '5cf85afdf029da11eee0e4bb6703f7e349bbe3ca',
             'website' => fake()->url(),
         ]);
     }
