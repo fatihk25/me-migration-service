@@ -15,9 +15,7 @@ return new class extends Migration
     {
         Schema::create('sensor_rules', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('file')->nullable();
-            $table->string('status')->nullable();
             $table->uuid('sensor_uuid')->nullable();
             $table->foreign('sensor_uuid')->references('uuid')->on('sensors') ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();

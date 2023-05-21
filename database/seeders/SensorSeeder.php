@@ -26,7 +26,7 @@ class SensorSeeder extends Seeder
             'mqtt_port' => '1883',
             'network_interface' => 'eth0',
             'protected_subnet' => '192.168.3.0',
-            'update_status' => 'created',
+            'status' => 'created',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
