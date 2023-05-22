@@ -16,9 +16,10 @@ class OrganizationUserSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('organization_user')->insert([
+        DB::table('organization_user_role')->insert([
             'user_id' => 1,
             'organization_id' => 1,
+            'role_id' => 1,
         ]);
     }
 }

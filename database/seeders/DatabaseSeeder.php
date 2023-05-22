@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SensorSeeder::class,
             PermissionSeeder::class,
-            OrganizationUserSeeder::class,
             PermissionRoleSeeder::class,
+            OrganizationUserSeeder::class,
         ]);
     }
 }
