@@ -14,14 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('organization_user_role', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('organization_id');
-            $table->unsignedBigInteger('role_id');
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('organization_id')->references('id')->on('organizations')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('role_id')->references('id')->on('roles')->onUpdate('cascade')->onDelete('cascade');
-            $table->primary(['role_id', 'user_id', 'organization_id']);
+            $table->unsignedBigInteger('organization_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('role_id')->nullable();
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->timestamps();
+            $table->unique(['organization_id', 'user_id', 'role_id']);
         });
     }
 
