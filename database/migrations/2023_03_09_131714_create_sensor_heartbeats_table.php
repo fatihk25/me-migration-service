@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('sensor_id');
             $table->foreign('sensor_id')->references('id')->on('sensors') ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamp('last_seen')->nullable();
+            $table->boolean('isActive')->nullable();
             $table->timestamps();
         });
     }
