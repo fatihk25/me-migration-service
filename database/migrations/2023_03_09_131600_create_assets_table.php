@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
+            $table->string('location')->nullable();
+            $table->string('as_number')->nullable();
+            $table->string('dns')->nullable();
             $table->integer('organization_id')->nullable();
             $table->integer('pic_id')->nullable();
             $table->integer('sensor_id')->nullable();
