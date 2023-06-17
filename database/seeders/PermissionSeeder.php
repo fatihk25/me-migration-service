@@ -67,26 +67,26 @@ class PermissionSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Create Organization',
-                'slug' => 'create-organization',
+                'name' => 'Create Role',
+                'slug' => 'create-role',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Edit Organization',
-                'slug' => 'edit-organization',
+                'name' => 'Edit Role',
+                'slug' => 'edit-role',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Delete Organization',
-                'slug' => 'delete-organization',
+                'name' => 'Delete Role',
+                'slug' => 'delete-role',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Read Organization',
-                'slug' => 'read-organization',
+                'name' => 'Read Role',
+                'slug' => 'read-role',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
@@ -119,7 +119,7 @@ class PermissionSeeder extends Seeder
         foreach($data as $key => $value) {
             DB::table('permissions')->insert([
                 'name' => $value["name"],
-                'slug' => $value["slug"],   
+                'slug' => $value["slug"],
                 'created_at' => $value["created_at"],
                 'updated_at' => $value["updated_at"],
             ]);
